@@ -1,0 +1,40 @@
+/* Type Selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #003049;
+    margin: 0;
+}
+
+/* ID Selector */
+#main-header {
+    background-color: #003049;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #f77f00;
+}
+
+/* Class Selector */
+.content-box {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #f77f00;
+    border-radius: 10px;
+}
+
+/* Type Selector */
+h2 {
+    color: #d62828;
+}
+
+/* ID Selector */
+#footer {
+    background-color: #003049;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 4px solid #f77f00;
+}  
