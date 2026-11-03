@@ -292,7 +292,13 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
+    nav ul {
+        flex-direction:
+column;
+    }
+} 
+@media (max-width: 768px) {
+    body {
+        background: red !important;
     }
 } 
