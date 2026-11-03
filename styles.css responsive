@@ -1,0 +1,157 @@
+/* ------------------
+   COLOR PALETTE
+------------------- */
+
+:root {
+    --primary: #4f46e5;
+    --secondary: #818cf8;
+    --accent: #f59e0b;
+    --light: #f8fafc;
+    --dark: #1e293b;
+
+    /* 8px spacing system */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+}
+
+/* ------------------
+   RESET
+------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* TYPE SELECTOR */
+
+h1,
+h2,
+h3 {
+    font-family: "Merriweather", serif;
+    margin-bottom: var(--space-2);
+}
+
+/* ID SELECTOR */
+
+#main-header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: var(--space-5);
+}
+
+/* CLASS SELECTORS */
+
+.navbar {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    padding: var(--space-2);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: var(--accent);
+}
+
+.hero {
+    text-align: center;
+    padding: var(--space-6) var(--space-3);
+}
+
+/* GRID LAYOUT */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-4);
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    padding: var(--space-3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    transition: 0.3s;
+}
+
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: var(--space-3);
+    margin-top: var(--space-5);
+}
+
+/* ------------------
+   TABLET
+------------------- */
+
+@media (max-width: 768px) {
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+}
+
+/* ------------------
+   MOBILE
+------------------- */
+
+@media (max-width: 320px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: var(--space-3);
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* DESKTOP LARGE */
+
+@media (min-width: 1200px) {
+
+    .project-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+} 
