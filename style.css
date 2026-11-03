@@ -31,7 +31,8 @@ header {
 }
 
 header h1 {
-    color: #FFFFFF;
+    font-size: clamp(2rem,
+5vw,3rem);
 }
 
 /* =========================
