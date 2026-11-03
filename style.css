@@ -184,3 +184,115 @@ textarea:focus {
     outline: 2px solid #4DA6FF;
     border-color: #4DA6FF;
 }
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav {
+        padding: 20px 10px;
+    }
+
+    /* Header */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Sections */
+    section {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    /* Text */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Project cards */
+    .project-card {
+        padding: 15px;
+    }
+
+    /* Buttons */
+    button,
+    .btn {
+        width: 100%;
+        padding: 14px;
+    }
+
+    /* Images */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Form fields */
+    input,
+    textarea {
+        font-size: 16px;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .project-card {
+        margin: 15px 0;
+    }
+} 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+} 
