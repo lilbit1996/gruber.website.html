@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"> 
-<link rel="stylesheet" href="responsive.css"> 
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bianca Gruber | Portfolio</title>
-</head>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap"
+          rel="stylesheet">
+
     <style>
+
         * {
-            margin: 9.5;
-            padding: 3.5;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: "Segoe UI", Arial, sans-serif;
+            font-family: "Poppins", Arial, sans-serif;
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
@@ -31,18 +37,16 @@
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             margin-bottom: 10px;
         }
 
         header p {
             font-size: 1.2rem;
-            opacity: 0.95;
         }
 
         .container {
-            width: 90%;
-            max-width: 1000px;
+            width: min(90%, 1000px);
             margin: 30px auto;
         }
 
@@ -66,14 +70,6 @@
             margin-bottom: 12px;
         }
 
-        img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 15px;
-            display: block;
-            margin: 15px auto;
-        }
-
         a {
             color: #6C63FF;
             text-decoration: none;
@@ -93,14 +89,11 @@
         }
 
         /* Tablet */
-        @media screen and (max-width: 768px) {
+
+        @media (max-width: 768px) {
 
             header h1 {
                 font-size: 2.2rem;
-            }
-
-            header p {
-                font-size: 1rem;
             }
 
             .container {
@@ -113,7 +106,8 @@
         }
 
         /* Mobile */
-        @media screen and (max-width: 480px) {
+
+        @media (max-width: 480px) {
 
             header {
                 padding: 3rem 1rem;
@@ -124,7 +118,7 @@
             }
 
             header p {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
 
             .card {
@@ -135,6 +129,7 @@
                 font-size: 1.3rem;
             }
         }
+
     </style>
 </head>
 
@@ -145,9 +140,9 @@
         <p>Graphic Design Student | Creative Thinker | Future Designer</p>
     </header>
 
-    <div class="container">
+    <main class="container">
 
-        <div class="card">
+        <section class="card">
             <h2>About Me</h2>
             <p>
                 Hello! My name is Bianca Gruber, and I am passionate about
@@ -155,46 +150,54 @@
                 creating designs that communicate ideas effectively while
                 combining aesthetics with purpose.
             </p>
-        </div>
+        </section>
 
-        <div class="card">
+        <section class="card">
             <h2>My Skills</h2>
-            <p>
-                • Graphic Design<br>
-                • Digital Illustration<br>
-                • Branding & Identity<br>
-                • Creative Problem Solving<br>
-                • Web Design Fundamentals<br>
-                • Teamwork & Communication
-            </p>
-        </div>
+            <ul>
+                <li>Graphic Design</li>
+                <li>Digital Illustration</li>
+                <li>Branding & Identity</li>
+                <li>Creative Problem Solving</li>
+                <li>Web Design Fundamentals</li>
+                <li>Teamwork & Communication</li>
+            </ul>
+        </section>
 
-        <div class="card">
+        <section class="card">
             <h2>Projects</h2>
             <p>
                 This section can showcase class assignments, personal artwork,
-                logos, website designs, or any creative projects you want to
-                feature in your portfolio.
+                logos, website designs, or any creative projects you want to feature.
             </p>
-        </div>
+        </section>
 
-        <div class="card">
+        <section class="card">
             <h2>Contact</h2>
-            <p>Email: biancagruber766@gmail.com</p>
-            <p>
-    Portfolio:
-    <a href="https://lilbit1996.github.io/gruber.website.html/"
-       target="_blank">
-       View My Portfolio
-    </a>
-</p>
-        </div>
 
-    </div>
+            <p>
+                Email:
+                <a href="mailto:biancagruber766@gmail.com">
+                    biancagruber766@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Portfolio:
+                <a href="https://lilbit1996.github.io/gruber.website.html/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View My Portfolio
+                </a>
+            </p>
+        </section>
+
+    </main>
 
     <footer>
         <p>&copy; 2026 Bianca Gruber | Graphic Design Portfolio</p>
     </footer>
 
 </body>
-</html> 
+
+</html>
