@@ -1,18 +1,62 @@
 # gruber.website.html 
-# Accessible Contact Form
+# Milestone 2: Accessibility and Visual Design Improvements
 
-The Contact page includes a fully accessible contact form designed according to WCAG and semantic HTML best practices.
+## Accessibility Testing and Fixes
 
-## Accessibility Features
+### WAVE Accessibility Corrections
+
+1. Added descriptive alternative text to all images so screen reader users can understand image content.
+2. Corrected heading hierarchy to maintain a logical page structure.
+3. Added explicit labels for all form controls.
+4. Added semantic HTML elements (`header`, `nav`, `main`, `section`, and `footer`) to improve navigation and document structure.
+5. Improved keyboard accessibility for navigation links, buttons, and form controls.
+6. Adjusted all text and background color combinations to meet WCAG AA contrast requirements using the WebAIM Contrast Checker.
+7. Added accessible validation error messages using ARIA attributes and screen reader announcements.
+8. Ensured all links contain meaningful text that clearly describes their destination or purpose.
+9. Resolved all WAVE accessibility errors identified during testing.
+
+### WCAG AA Color Contrast Compliance
+
+All text and background color combinations were tested using the WebAIM Contrast Checker and meet WCAG AA accessibility standards.
+
+---
+
+## Visual Design Decisions
+
+### Gestalt Principle: Proximity
+
+I used proximity by grouping related information within clearly defined sections and project cards. This helps users quickly understand which content belongs together and improves visual organization.
+
+### Gestalt Principle: Similarity
+
+I used similarity by maintaining consistent typography, navigation styling, colors, spacing, buttons, and project card layouts across all pages. This creates a unified experience and helps users recognize recurring content patterns throughout the website.
+
+### Consistent Color Palette
+
+The website uses a consistent color palette across all three pages:
+
+- Primary Color: `#1F3A5F`
+- Secondary Color: `#2C5F8A`
+- Accent Color: `#D97706`
+- Background Color: `#F8F9FA`
+- Text Color: `#111827`
+
+All colors were tested using the WebAIM Contrast Checker to ensure compliance with WCAG AA standards.
+
+---
+
+## Accessible Contact Form
+
+### Accessibility Features
 
 - Every form field has an associated `<label>` element.
 - Related fields are grouped using `<fieldset>` and `<legend>`.
 - Required fields are clearly identified.
 - Error messages are announced to assistive technologies using `aria-live="polite"`.
-- Error styling includes both color and visual border indicators, ensuring users do not rely solely on color to identify issues.
+- Error styling includes both color and visual border indicators.
 - The form is fully keyboard accessible.
 
-## Contact Form HTML
+### Contact Form HTML
 
 ```html
 <form id="contact-form" novalidate>
@@ -44,37 +88,39 @@ The Contact page includes a fully accessible contact form designed according to 
       id="email-error"
 *     class="error-message"
       a*ia-live="polite"></span>
-  </field*et>
+
+  </fiel*set>
 
   <fieldset>
-    <legend>Message</legend>
+    <legend>Mes*age</legend>
 
-    <label for="message">Message *</label>
-    <textarea
+    <label for="mess*ge">Message *</label>
+    <textare*
       id="message"
-      name="message"
+      name="me*sage"
       rows="5"
-      required
-      aria-describedby="message-error"></textarea>
+      require*
+      aria-describedby="message-e*ror"></textarea>
 
     <span
-      id="message-error"
-      class="error-message"
-      aria-live="polite"></span>
+      *d="message-error"
+      class="err*r-message"
+      aria-live="polite*></span>
+
   </fieldset>
 
-  <button type="submit">Send Message</button>
+  <button*type="submit">Send Message</button*
 
 </form>
 ```
 
-## Error State Styling (CSS)
+### Contact Form CS*
 
 ```css
 .error-message {
-  display: block;
+  displa*: block;
   color: #b91c1c;
-  font-size: 0.9rem;
+  font-*ize: 0.9rem;
   margin-top: 0.25rem;
 }
 
@@ -98,7 +144,7 @@ button:focus {
 }
 ```
 
-## Accessible Form Validation (JavaScript)
+### Contact Form Validation JavaScript
 
 ```javascript
 const form = document.getElementById("contact-form");
@@ -145,40 +191,8 @@ form.addEventListener("submit", function (event) {
 });
 ```
 
-# Accessibility Improvements
+---
 
-1. Added descriptive alternative text to all images so screen reader users can understand image content.
-2. Corrected heading hierarchy to maintain a logical page structure.
-3. Added explicit labels for all form controls.
-4. Added semantic HTML elements (`header`, `nav`, `main`, `section`, and `footer`) to improve navigation and document structure.
-5. Improved keyboard accessibility for navigation links, buttons, and form controls.
-6. Adjusted all text and background color combinations to meet WCAG AA contrast requirements using the WebAIM Contrast Checker.
-7. Added accessible validation error messages using ARIA announcements.
-8. Ensured all links contain meaningful text that clearly describes their destination or purpose.
-9. Resolved all WAVE accessibility errors identified during testing.
+## Summary
 
-# Visual Design Decisions
-
-## Gestalt Principle: Proximity
-
-I used proximity by grouping related information within clearly defined sections and project cards. This helps users quickly understand which content belongs together and improves visual organization.
-
-## Gestalt Principle: Similarity
-
-I used similarity by maintaining consistent typography, button styles, spacing, colors, and card layouts across all pages. This creates a unified experience and helps users recognize recurring content patterns.
-
-## Consistent Color Palette
-
-The website uses a consistent color palette across all three pages:
-
-- Primary Color: `#1F3A5F`
-- Secondary Color: `#2C5F8A`
-- Accent Color: `#D97706`
-- Background Color: `#F8F9FA`
-- Text Color: `#111827`
-
-All colors were tested using the WebAIM Contrast Checker to ensure compliance with WCAG AA standards.
-
-# Summary
-
-This portfolio was refined to improve accessibility, usability, and visual consistency. All WAVE errors were corrected, WCAG AA color contrast requirements were met, Gestalt design principles were intentionally implemented, and an accessible contact form with semantic structure and validation was added to support all users.
+This portfolio was refined to improve accessibility, usability, and visual consistency. All WAVE accessibility errors were corrected, WCAG AA color contrast requirements were met, Gestalt design principles were intentionally implemented, and an accessible contact form with semantic structure, labels, fieldsets, legends, and validation feedback was added to support all users.
